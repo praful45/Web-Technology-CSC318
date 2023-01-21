@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>pseudo class</title>
+  <style>
+    .hov:hover {
+      color: red;
+    }
+
+    .act:active {
+      color: green;
+    }
+
+    .vis:visited {
+      color: cyan;
+    }
+
+    input:focus {
+      border: 5px dotted red;
+    }
+
+    h1:first-child {
+      font-size: 50px;
+      color: brown;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Pseudo Class</h1>
+  <h2 class="hov">This is example of :hover pseudo class</h2>
+  <a href="#" class="act">active example</a> <br />
+  <a href="#" class="vis">visited example</a>
+  <form>
+    Name: <input type="text" placeholder="enter your name" />
+  </form>
+  <h1>Hello pseudo class</h1>
+</body>
+
+</html>

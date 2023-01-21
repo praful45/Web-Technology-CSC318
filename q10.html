@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Combinators</title>
+    <link rel="stylesheet" href="combinators.css" />
+  </head>
+  <body>
+    <div class="gen-sib-sel">
+      <h1>General Sibling Selector</h1>
+      <p>In this paragraph, ~(general sibling selector) applied.</p>
+      <div>
+        <p>In this paragraph, ~ is not applied.</p>
+      </div>
+      <p>In this paragraph, ~ applied.</p>
+      <p>In this paragraph, ~ applied.</p>
+    </div>
+    <div class="adj-sib-sel">
+      <h1>Adjacent Sibling Selector</h1>
+      <p>this is 1st paragraph, +(adjacent sibling selector) not applied</p>
+      <p>this is 2nd para just after p, so + applied</p>
+      <div>this is div</div>
+      <p>this is 3rd para but not just after 2nd, so + not applied</p>
+      <p>this is 4th para just after 3rd, so + applied</p>
+    </div>
+    <div class="child-sel">
+      <h1>Child Selector</h1>
+      <p>in this para, > is not applied</p>
+      <p>in this para, > is not applied</p>
+      <div>
+        <h1>this is h1 in div</h1>
+        <p>in this para, >(child selector) is applied</p>
+        <p>in this para, > is applied</p>
+      </div>
+    </div>
+    <div class="des-spac-sel">
+      <h1>Descendant Space Selector</h1>
+      <div>
+        <p>in this para, descendant space selector is applied</p>
+        <p>in this para, descendant space selector is applied</p>
+        <span>
+          <p>in this para, descendant space selector is applied</p>
+        </span>
+      </div>
+      <p>in this para, descendant space selector is not applied</p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>pesudo element</title>
+  <style>
+    h1::first-letter {
+      font-size: 2cm;
+      color: red;
+    }
+
+    h2::first-line {
+      color: red;
+    }
+
+    h3::before {
+      content: "ADDED BEFORE";
+      color: red;
+    }
+
+    h4::after {
+      content: "ADDED AFTER";
+      color: red;
+    }
+
+    h5::selection {
+      color: red;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Hello Everyone</h1>
+  <h2>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. <br />The Maxime
+    odio aspernatur rem unde soluta ipsam nam nostrum sunt vero blanditiis!
+  </h2>
+  <h3>
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore, id?
+  </h3>
+  <h4>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, ea!
+  </h4>
+  <h5>The selected part will change the color.</h5>
+</body>
+
+</html>

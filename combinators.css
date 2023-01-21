@@ -1,0 +1,6 @@
+.gen-sib-sel h1 ~ p,
+.adj-sib-sel p + p,
+.child-sel div > p,
+.des-spac-sel div p {
+  color: green;
+}
