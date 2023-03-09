@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Cookie Using JS</title>
+</head>
+
+<body>
+    <h1 id="cookie-value">Cookie value will appear here</h1>
+
+    <script>
+        // Set the cookie
+        document.cookie = "myCookie=Praful Shrestha";
+
+        // Get the value of the cookie
+        const cookieValue = document.cookie
+            .split("; ")
+            .find(row => row.startsWith("myCookie"))
+            .split("=")[1];
+
+        // Display the cookie value in the h1 tag
+        document.getElementById("cookie-value").innerText = cookieValue;
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Odd or Even</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<body>
+    <fieldset>
+        <h1>Even/Odd Checker</h1>
+        <label for="number">Number:</label>
+        <input type="text" id="num" placeholder="Enter a valid number"><br><br>
+        <button id="btn-check">Odd or Even</button>
+    </fieldset>
+    <script>
+        $(document).ready(function () {
+            $("#btn-check").click(function () {
+                const num = $("#num").val();
+                if (isNaN(num)) {
+                    alert("**Enter a valid number!");
+                }
+                else {
+                    if (num % 2 === 0) {
+                        alert(`${num} is even number`);
+                    }
+                    else {
+                        alert(`${num} is odd number`);
+                    }
+                }
+            })
+        })
+    </script>
+</body>
+</head>
+
+</html>
