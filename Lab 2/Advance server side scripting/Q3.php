@@ -1,41 +1,23 @@
 <?php
-interface Animal {
-    public function makeSound();
+class Fruit {
+  public $name;
+  public $color;
+  public function __construct($name, $color) {
+    $this->name = $name;
+    $this->color = $color;
   }
-  
-  interface Plant {
-    public function grow();
+  public function intro() {
+    echo "The fruit is {$this->name} and the color is {$this->color}.";
   }
-  
-  class Tree implements Plant {
-    public function grow() {
-      echo "The tree is growing <br>";
-    }
+}
+
+// Strawberry is inherited from Fruit
+class Strawberry extends Fruit {
+  public function message() {
+    echo "Am I a fruit or a berry? ";
   }
-  
-  class Cat implements Animal {
-    public function makeSound() {
-      echo "Cat is making sound Meow <br>       ";
-    }
-  }
-  
-  class CatTree implements Animal, Plant {
-    public function makeSound() {
-      echo "The catTree is making sound Meow and ";
-    }
-    
-    public function grow() {
-      echo "the cat tree is growing";
-    }
-  }
-  
-  $tree = new Tree();
-  $cat = new Cat();
-  $catTree = new CatTree();
-  
-  $tree->grow(); // outputs "The tree is growing"
-  $cat->makeSound(); // outputs "Meow"
-  $catTree->makeSound(); // outputs "Meow"
-  $catTree->grow(); // outputs "The cat tree is growing"
-  
+}
+$strawberry = new Strawberry("Strawberry", "red");
+$strawberry->message();
+$strawberry->intro();
 ?>
