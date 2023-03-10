@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#myForm').submit(function (event) {
+                event.preventDefault();
+                $.ajax({
+                    type: 'POST',
+                    url: 'process.php',
+                    data: $(this).serialize(),
+                    dataType: 'json', // Set the expected data type
+                    success: function (response) {
+                        alert(response.message);
+                    },
+                    // success: function () {
+                    //     alert('form was submitted');
+                    // },
+                    error: function () {
+                        alert('An error occurred while submitting the form.');
+                    }
+                });
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+    <form id="myForm">
+        <input type="text" name="name" placeholder="Name">
+        <input type="email" name="email" placeholder="Email">
+        <button type="submit">Submit</button>
+    </form>
+
+</body>
+
+</html>

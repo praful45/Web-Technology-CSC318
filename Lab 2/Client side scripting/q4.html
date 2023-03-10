@@ -10,12 +10,10 @@
 
 <body>
     <fieldset>
-        <form action="sum" onsubmit="sumNum(event)">
-            Number 1: <input type="number" id="num1"><br>
-            Number 2: <input type="number" id="num2"><br>
-            <input type="submit" value="Add"><br>
-            <h3 id="sum">The sum of two number is : </h3>
-        </form>
+        Number 1: <input type="number" id="num1"><br><br>
+        Number 2: <input type="number" id="num2"><br>
+        <button onclick="sumNum(event)">Add</button><br>
+        <h3 id="sum">The sum of two number is : </h3>
     </fieldset>
     <script>
         function sumNum(e) {
@@ -25,7 +23,6 @@
             let res = num1 + num2;
             if (isNaN(res)) {
                 alert("Enter valid number");
-                console("hello");
             }
             else {
 
